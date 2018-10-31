@@ -1,9 +1,12 @@
+import java.util.ArrayList;
+
 public class student {
 	
 	private String firstname;
 	private String lastname;
 	private double gpa;
 	private int id;
+	private ArrayList<Integer> courses = new ArrayList<>();
 	
 	public student(String fName, String lName, int id) {
 		firstname = fName;
@@ -32,6 +35,8 @@ public class student {
 	public void setGpa(double gpa) {
 		this.gpa = gpa;
 	}
-	
+	public void addCourse() {
+		
+	}
 
 }

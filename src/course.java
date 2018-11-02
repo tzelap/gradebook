@@ -1,16 +1,22 @@
+import java.util.ArrayList;
+import java.util.UUID;
 
-public class course {
+public class course extends discipline {
 	
+
 	private String name;
-	private int year;
-	private int semester; //0 is fall, 1 is winter, 2 is spring, 4 is summer
 	private int courseId;
-	private int sectionId;
+	private ArrayList<section> sec = new ArrayList<>();
+	private int numofSections = 0;
 	
-	public course(String name, int year, int semester) {
-		this.name = name;
-		this.year = year;
-		this.semester = semester;
+	public course(String dname, String cname) {
+		super(dname);
+		this.name = cname;
+		
+	}
+	
+	public void addSection(UUID teachID) {
+		section s = new section(this.name, numofSections++, teachID);
 	}
 	
 }

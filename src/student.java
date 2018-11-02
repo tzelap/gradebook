@@ -1,34 +1,19 @@
 import java.util.ArrayList;
 
-public class student {
+public class student extends person {
 	
-	private String firstname;
-	private String lastname;
+	
 	private double gpa;
-	private int id;
+	
 	private ArrayList<Integer> courses = new ArrayList<>();
 	
-	public student(String fName, String lName, int id) {
-		firstname = fName;
-		lastname = lName;
-		this.id = id;
+	public student(String fname, String lname) {
+		super(fname, lname);
+		
 	}
 	
-	public String getName() {
-		return this.firstname +" "+ this.lastname;
-	}
-	public void setfName(String fName) {
-		this.firstname = fName;
-	}
-	public void setlName(String lName) {
-		this.lastname = lName;
-	}
-	public int getId() {
-		return this.id;
-	}
-	public void setId(int id) {
-		this.id = id;
-	}
+	
+	
 	public double getGpa() {
 		return this.gpa;
 	}

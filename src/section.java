@@ -2,17 +2,23 @@ import java.util.UUID;
 
 public class section extends course {
 	private int section;
-	private UUID teacherId;
+	private int teacherId;
 	
-	public section(String name, int section, UUID teacherId) {
-		super(name);
+	public section(String dname, String cname, int section, int teacherId) {
+		super(dname, cname);
 		this.section = section;
 		this.teacherId = teacherId;
 	}
-	public UUID getTeach() {
+	public int getTeach() {
 		return teacherId;
 	}
-	public void setTeach(UUID id) {
+	public void setTeach(int id) {
 		teacherId = id;
+	}
+	public int getSection() {
+		return section;
+	}
+	public void setSection(int section) {
+		this.section = section;
 	}
 }

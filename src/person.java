@@ -1,13 +1,15 @@
+import java.util.Random;
 import java.util.UUID;
 
 public class person {
 	private String first, last;
-	private UUID ident;
+	private int id;
+	
 	
 	public person(String fname, String lname){
 		first = fname;
 		last = lname;
-		ident = UUID.randomUUID();
+		
 		
 	}
 	public String getName() {
@@ -19,11 +21,11 @@ public class person {
 	public void setlName(String lName) {
 		this.last = lName;
 	}
-	public UUID getId() {
-		return this.ident;
+	public int getId() {
+		return this.id;
 	}
-	public void setId(UUID id) {
-		this.ident = id;
+	public void setId(int id) {
+		this.id = id;
 	}
 	
 }

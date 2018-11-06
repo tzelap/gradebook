@@ -1,32 +1,20 @@
 import java.util.ArrayList;
 import java.util.HashMap;
 
-public class gradebook extends section{
+public class gradebook{
 	
 	private HashMap<student, ArrayList<assignment>> gradebook = new HashMap<>();
-	private double points = 0;
+	private double maxpoints = 0;
 	private ArrayList<assignment> masterlist = new ArrayList<>();
+	private int numStudents;
 	
-	public gradebook(String name) {
-		super(name);
-		
+	public gradebook(int numStudents) {
+		this.numStudents = numStudents;
 	}
 	
-	public int getCourse() {
-		return courseId;
-	}
-	public void setCourse(int id) {
-		courseId = id;
-	}
-	public int getSect() {
-		return sectionId; 
-	}
-	public void setSect(int id) {
-		sectionId = id;
-	}
 	public void addAssn(assignment e) {
 		masterlist.add(e);
-		points += e.getWeight();
+		maxpoints += e.getWeight();
 	}
 	
 	public void addGrade(student stud, assignment assn ) {

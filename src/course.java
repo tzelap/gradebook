@@ -4,19 +4,22 @@ import java.util.UUID;
 public class course extends discipline {
 	
 
-	private String name;
-	private int courseId;
+	protected String course_name;
+	protected int courseId;
 	private ArrayList<section> sec = new ArrayList<>();
 	private int numofSections = 0;
 	
 	public course(String dname, String cname) {
 		super(dname);
-		this.name = cname;
+		course_name = cname;
 		
 	}
 	
-	public void addSection(UUID teachID) {
-		section s = new section(this.name, numofSections++, teachID);
+	public void addSection(int teachID) {
+		section s = new section(super.disc_name, course_name, ++numofSections, teachID);
+		sec.add(s);
 	}
+	
+	
 	
 }
